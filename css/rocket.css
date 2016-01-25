@@ -1,3 +1,8 @@
+body{
+	font-family: 'helvetca', 'arial', sans-serif;
+}
+
+
 .left{
 	background-color: aquamarine;
 	position: fixed;
@@ -8,7 +13,7 @@
 }
 
 .right{
-	background-color: aliceblue;
+	background-color: white;
 	position: fixed;
 	width: 50%;
 	height: 100%;
@@ -16,33 +21,101 @@
 	right: 0;
 }
 
+.interface{
+	text-align: center;
+	padding: 20px;
+
+}
+
+a.button{
+	display: inline-block;
+	background-color: white;
+	color: black;
+	padding: 20px 40px;
+	text-decoration: none;
+	border-radius: 10px;
+	text-transform: uppercase;
+	transition: color 300ms;
+}
+
+a:hover{
+	color: red;
+}
 
 .ground{
-	background-color: green;
+	background: url('../img/ground.png') no-repeat center center;
 	position: absolute;
-	bottom: 0;
+	bottom: 2px;
 	left: 0;
 	width: 100%;
-	height: 20px;
+	height: 19px;
+
 }
 
 .rocket{
 	position: absolute;
 	left: 50%;
-	bottom: 20px;
-	width: 20px;
-	height: 100px;
-	background-color: blue;
+	bottom: -23px;
+	width: 247px;
+	height: 225px;
+	margin-left: -112.5px;
+	background: url('../img/rocket-stage1.png') no-repeat 0 0;
 	transition: bottom 10000ms;
+}
+
+.nervous{
+	position: absolute;
+	bottom: 150px;
+	left: 50%;
+	background: url('../img/nervous.png') no-repeat 0 0;
+	width: 185px;
+	height: 86px;
+	margin-left: 35px;
+	display: none;
+}
+.nervous.show
+{
+	display:block;
+}
+
+.excited{
+	position: absolute;
+	bottom: 160px;
+	left: 50%;
+	background: url('../img/excited.png') no-repeat 0 0;
+	width: 185px;
+	height: 88px;
+	margin-left: -225px;
+	display: none;
+}
+
+.excited.show{
+	display:block;
+}
+/* rocket bg image */
+body.body-state2 .rocket{
+	background-image: url('../img/rocket-stage2.gif');
+}
+body.body-state3 .rocket,
+body.body-state4 .rocket{
+	background-image: url('../img/rocket-stage3.gif');
+}
+body.body-state5 .rocket{
+	background-image: url('../img/Boom.png');
+	width: 200px;
+	height: 150px;
+	margin-left: -100px;
 }
 
 body.body-state1 .rocket{
 	transition: none;
 }
 
+
+
 body.body-state3 .rocket,
 body.body-state4 .rocket{
-	bottom: 1000px;
+	bottom: 1200px;
 }
 
 .state1,
