@@ -101,7 +101,7 @@ body.body-state4 .rocket{
 	background-image: url('../img/rocket-stage3.gif');
 }
 body.body-state5 .rocket{
-	background-image: url('../img/Boom.png');
+	background-image: url('../img/boom.png');
 	width: 200px;
 	height: 150px;
 	margin-left: -100px;
